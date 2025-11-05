@@ -40,6 +40,11 @@ def parse_args():
     write_tree_parser = commands.add_parser("write-tree")
     write_tree_parser.set_defaults(func=cli_write_tree)
 
+    read_tree_parser = commands.add_parser("read-tree")
+    read_tree_parser.set_defaults(func = read_tree)
+    read_tree_parser.add_argument('tree')
+
+
     return parser.parse_args()
 
 def init(args):
@@ -71,3 +76,8 @@ def cli_write_tree(args):
     """
     _ = args
     print(base.write_tree())
+def read_tree(args):
+    '''
+    Reads the given OID to fetch directory with which it is associated.
+    '''
+    base.read_tree(args.tree)
