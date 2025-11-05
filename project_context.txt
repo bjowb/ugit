@@ -1,0 +1,16 @@
+Project: ugit
+
+This project is a command-line tool named 'ugit' that mimics some of the basic functionalities of Git.
+
+Core functionalities:
+- `init`: Initializes a new ugit repository by creating a `.ugit` directory.
+- `hash-object`: Computes the hash of a file and stores it in the object database.
+- `cat-file`: Retrieves and displays the content of an object from the object database.
+
+Project Structure:
+- `setup.py`: Configures the project for installation, defining the `ugit` command-line entry point.
+- `ugit/`: The main package directory.
+  - `cli.py`: Handles command-line argument parsing and calls the appropriate functions based on user input.
+  - `data.py`: Manages the underlying data of the ugit repository, including object storage and retrieval.
+
+The `ugit` command is installed and functional, providing the above subcommands.

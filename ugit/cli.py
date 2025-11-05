@@ -62,6 +62,7 @@ def cat_file(args):
     Prints the content of a ugit object.
     """
     sys.stdout.flush()
+
     sys.stdout.buffer.write(data.get_object(args.object, expected=None))
 
 def cli_write_tree(args):
@@ -69,4 +70,4 @@ def cli_write_tree(args):
     Writes the current directory to the object store.
     """
     _ = args
-    base.write_tree()
+    print(base.write_tree())
